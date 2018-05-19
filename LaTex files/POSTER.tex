@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% baposter Portrait Poster
+% LaTeX Template
+% Version 1.0 (15/5/13)
+%
+% Created by:
+% Brian Amberg (baposter@brian-amberg.de)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a0paper,portrait]{baposter}
+
+\usepackage{tabulary}
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{relsize} % Used for making text smaller in some places
+\usepackage[urlcolor  = blue]{hyperref}
+
+
+\definecolor{bordercol}{RGB}{5,2,70} % Border color of content boxes
+\definecolor{headercol1}{RGB}{5,2,70} % Background color for the header in the content boxes (left side)
+\definecolor{headercol2}{RGB}{5,2,70} % Background color for the header in the content boxes (right side)
+\definecolor{headerfontcol}{RGB}{255,255,255} % Text color for the header text in the content boxes
+\definecolor{boxcolor}{RGB}{255,255,255} % Background color for the content in the content boxes
+
+\begin{document}
+
+\background{ % Set the background to an image (background.pdf)
+
+}
+
+\begin{poster}{
+grid=false,
+borderColor=bordercol, % Border color of content boxes
+headerColorOne=headercol1, % Background color for the header in the content boxes (left side)
+headerColorTwo=headercol1, % Background color for the header in the content boxes (right side)
+headerFontColor=headerfontcol, % Text color for the header text in the content boxes
+boxColorOne=boxcolor, % Background color for the content in the content boxes
+headershape=roundedright, % Specify the rounded corner in the content box headers
+headerfont=\Large\sf\bf, % Font modifiers for the text in the content box headers
+textborder=rectangle,
+background=user,
+headerborder=open, % Change to closed for a line under the content box headers
+boxshade=plain
+}
+{}
+%
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR NAME
+%----------------------------------------------------------------------------------------
+%
+%\vspace{2em}
+{\sf\bf Analysis { } of { } Discourse { }  Macrostructure  { } in { } Schizophrenia: a { } Corpus { }  Study} % Poster title
+{\vspace{1em} Galina Ryazanskaya, 161\\ % Author names
+{\smaller gmryazanskaya@edu.hse.ru}\\% Author email addresses
+{..}\\
+}
+%
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\headerbox{Introduction}{name=introduction,column=0,row=0, span=3}{
+\begin{itemize}
+\item Schizophrenia is a complex highly heritable mental disorder, characterized by a disintegration of the process of thinking, loss of contact with reality, and emotional responsiveness 
+\item One of the diagnostic criteria for schizophrenia in both DSM-5 \cite{Tandon2013} and ICD-10 \cite{ICD-10} is disorganized, bizarre speech  
+\item There are several measures of discourse incoherence, which are well studied in aphatic speech \cite{KhudyakovaPreprint}
+\item We concentrated our attention on measures from several different articles: 
+\begin{itemize}
+    \item 5-score scale for local and global coherence \cite{methodfrom}
+    \item violations of completeness (measure of informativeness) \cite{Christiansen1995, KhudyakovaPreprint}
+\end{itemize} 
+\end{itemize}
+
+}
+
+%\headerbox{True vs False Motifs}{name=introduction2,column=1,row=0, span=2}{
+%\includegraphics[scale=0.42]{motif_study}
+%}
+
+%----------------------------------------------------------------------------------------
+%	MATERIALS AND METHODS
+%----------------------------------------------------------------------------------------
+
+\headerbox{Materials and Methods}{name=methods,column=0,below=introduction, span=3}{
+
+
+\underline{\textbf{Hypothesis}}
+(based on previous research \cite{Ditman2010})
+\begin{itemize}
+\item Lower scores on local and global coherence measures for participants with schizophrenia
+\item Somewhat lower scores on informativeness measures for participants with schizophrenia due to executive dysfunction
+\end{itemize}
+
+
+\underline{\textbf{Participants}}
+
+\begin{itemize}
+\item 9 outpatients diagnosed with schizophrenia and 10 controls from Russian CliPS \cite{RussianСliPS}
+\end{itemize}
+
+\underline{\textbf{Method}}
+
+\begin{itemize}
+\item The Pear Film \cite{Chafe1980} retelling
+\item ELAN annotation as in Russian CliPS \cite{RussianСliPS}
+\item Utterance segmentation,  application of coherence scaling and violations of completeness measuring
+\end{itemize}
+
+}
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSIONS
+%----------------------------------------------------------------------------------------
+\headerbox{Conclusions}{name=conclusion,span=1,column=2,below=methods}{
+Absence of significant difference may be due to:
+\begin{itemize}
+\item Small sample size
+\item Differences in symptoms
+\item Treatment
+\item Subjectivity of some methods (+absence of second annotator)
+\item Inapplicability of the methods
+\end{itemize}
+}
+
+%----------------------------------------------------------------------------------------
+%	RESULTS
+%----------------------------------------------------------------------------------------
+
+\headerbox{Results}{name=results2,span=2,column=0,below=methods, bottomaligned=conclusion}{ 
+There were no statistically significant differences between two groups\\
+The results of t-test (and one Kruskal-Wallis test):
+\begin{center}
+Characteristics of the texts and differences between groups
+\begin{tabular}{ c c c c c c }
+ \hline
+  & \multicolumn{2}{c}{\underline{Control}} & \multicolumn{2}{c}{\underline{Schizo}} & \\
+ measure & Mean & SD & Mean & SD & p-value\\ 
+ \hline
+ Global coherence & 4.39 & 0.390 & 4.10 & 0.533 & 0.201\\ 
+ Local coherence & 3.77 & 0.263 & 3.45 & 0.441 & 0.120\\
+ Absolute completeness violations & 0.50 & 0.707 & 1.44 & 1.424 & 0.098\\ 
+ Average completeness violations & 0.02 & 0.024 & 0.05 & 0.143 & 0.098\\
+ Number of utterances & 38.40 & 13.285 & 27.11 & 12.484 & 0.073\\ 
+ \hline
+\end{tabular}
+\end{center}
+}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\headerbox{References}{name=references,column=0, row=0.75, span=3}{
+
+\scriptsize % Reduce the font size in this block
+\renewcommand{\section}[2]{\vskip 0.05em} % Get rid of the default "References" section title
+\nocite{*} % Insert publications even if they are not cited in the poster
+
+\bibliographystyle{apalike}
+\bibliography{abstract} % Use sample.bib as the bibliography file
+}
+
+%----------------------------------------------------------------------------------------
+
+\end{poster}
+\end{document}
